@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apple Updates</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:400,500,800">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="/stylesheets/style2.css">
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div id="wrapper">
+    <div id="left-side">
+      <ul>
+        <li class="choose active">
+          <div class="icon active">
+            <img src="images/iphone.png" style="width: 90%">
+          </div>
+          iPhone
+        </li>
+        <li class="pay">
+          <div class="icon">
+            <img src="images/ipad.png" style="width: 90%">
+          </div>
+          iPad
+        </li>
+      </ul>
+    </div>
+
+    <div id="border">
+      <div id="line" class="one"></div>
+    </div>
+    <div id="right-side">
+      <div id="first" class="active">
+        <div class="date traditional">
+          <p>
+              <span class="day"><%= verdate.slice(0,2) %></span>
+              <span class="month"><%= months[verdate.slice(3,4)] %></span>
+          </p>
+      </div>
+        <div class="icon big">
+          <img src="images/iphone.png" style="width: 130%">
+        </div>
+        
+      
+        <h1>iOS  <%= versions %>  </h1>
+        <ul>
+          <% for(var i=0; i < devices.length; i++) { %>
+          
+              <li><a href=<%= devices[i].url %> ><%= devices[i].name %></a></li>
+          
+          <% } %>
+        </ul>
+      </div>
+
+      <div id="second">
+        <div class="icon big">
+          <img src="images/ipad.png" style="width: 130%">
+        </div>
+        <h1>iPadOS</h1>
+      
+        <p>13.4.1</p>
+        <p>13.4</p>
+      </div>
+
+    </div>
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="/javascripts/script.js"></script>
+
+</body>
+
+</html>

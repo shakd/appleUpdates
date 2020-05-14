@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div class="card">
+      <img src="images/iphone.png" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>iPhone</b></h4> 
+        <p>13.4.1</p> 
+      </div>
+    </div>
+
+    <label for="devices">Choose a device:</label>
+    <select id="devices">
+      <% for(var i=0; i < devices.length; i++) { %>
+        <option value="<%= devices[i].identifier %>"><%= devices[i].name %></option> 
+      <% } %>
+    </select>
+    <label for="versions">Choose a version:</label>
+    <select id="versions">
+      <% for(var i=0; i < versions.length; i++) { %>
+        <option value="<%= versions[i].device %>  <%= versions[i].number %> <%= versions[i].date %>"><%= versions[i].number %></option> 
+      <% } %>
+    </select>
+   
+    </div>
+  </body>
+</html>
