@@ -90,7 +90,6 @@ const getUrls = (async () => {
   };
   var groubedByTeam = groupBy(result, 'url');
   Object.keys(groubedByTeam).forEach(function (category) {
-
     console.log(`Version ${category}:`);
     groubedByTeam[category].forEach(function (memb, i) {
       console.log(`---->${i + 1}. ${memb.name}.`)
