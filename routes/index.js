@@ -30,7 +30,7 @@ const getVersions = (async () => {
     if (update[0] == "iOS" && (dd > qtr) && (parseInt(major, 10) > 12)) {
       if (vNumber.indexOf(update[1]) == -1) {
         vNumber.push(update[1]);
-        vSet.push({ device: update[0], number: update[1], date: (dd.getDate() + "/" + (dd.getMonth() + 1) + "/" + dd.getFullYear()) });
+        vSet.push({ device: update[0], number: update[1], date: (`${dd.getDate()}/${dd.getMonth() + 1}/${dd.getFullYear()}`) });
       }
     }
   });
